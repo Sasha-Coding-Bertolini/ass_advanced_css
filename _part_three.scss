@@ -1,0 +1,32 @@
+/* PART 3 - Social Media Buttons */
+
+.social-media-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .blog {
+    @include media-buttons($background-color-blog);
+  }
+  .twitter {
+    @include media-buttons($background-color-twitter);
+  }
+  .linkedin {
+    @include media-buttons($background-color-linkedin);
+  }
+  .facebook {
+    @include media-buttons($background-color-facebook);
+  }
+  .github {
+    @include media-buttons($background-color-github);
+  }
+  i {
+    color: white;
+    margin: 16px;
+  }
+  a {
+    @include center;
+    @include text-standard;
+    color: white;
+  }
+}

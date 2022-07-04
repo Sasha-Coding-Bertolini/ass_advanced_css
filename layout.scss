@@ -1,0 +1,15 @@
+@import "./constants";
+@import "./part_one";
+@import "./part_two";
+@import "./part_three";
+
+/* General */
+
+body {
+  background-color: $page-background;
+  margin: 2% 0px 2% 0px;
+}
+
+p {
+  @include text-standard();
+}

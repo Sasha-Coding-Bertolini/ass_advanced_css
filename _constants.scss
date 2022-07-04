@@ -1,0 +1,89 @@
+/* Constants */
+
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$page-background: #c3cfe2;
+$background-color-lower-part: #686de0;
+$background-color-blog: #e17b77;
+$background-color-facebook: #3b5998;
+$background-color-twitter: #00aced;
+$background-color-github: #333;
+$background-color-linkedin: #007bb6;
+
+@mixin text-standard {
+  max-width: 100%;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+@mixin box-standard {
+  width: 80%;
+  min-height: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0px;
+  margin-left: 10%;
+}
+
+@mixin center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+}
+
+@mixin grid-units {
+  .grid-one {
+    grid-area: grid-one;
+  }
+  .grid-two {
+    grid-area: grid-two;
+  }
+  .grid-three {
+    grid-area: grid-three;
+  }
+  .grid-four {
+    grid-area: grid-four;
+  }
+  .grid-five {
+    grid-area: grid-five;
+  }
+  .grid-six {
+    grid-area: grid-six;
+  }
+  .grid-seven {
+    grid-area: grid-seven;
+  }
+}
+
+@mixin button-standard($grid-area) {
+  width: 80%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0px;
+  margin-left: 10%;
+  border: 1px solid gray;
+  border-radius: 0.5em 0.5em 0.5em 0.5em;
+  grid-area: $grid-area;
+  margin-top: 10px;
+  height: 340px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin media-buttons($background-color-button) {
+  background-color: $background-color-button;
+  height: 50px;
+  width: 270px;
+  p {
+    color: white;
+  }
+  display: flex;
+  align-items: baseline;
+  margin-right: -220px;
+  transition-duration: 300ms;
+  &:hover {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,80 @@
+/* Part 2 - Portfolio Grid */
+
+.grid {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "grid-one"
+    "grid-two"
+    "grid-three"
+    "grid-four"
+    "grid-five"
+    "grid-six"
+    "grid-seven";
+  @include grid-units();
+  display: grid;
+  .grid-box {
+    display: grid;
+    margin-left: 10%;
+    margin-right: 10%;
+    transition-duration: 3000ms;
+    &:hover {
+      opacity: 0;
+    }
+    .headshot {
+      margin-top: -20px;
+    }
+    p {
+      font-size: 10px;
+    }
+    .upper-part {
+      margin-top: 10px;
+    }
+  }
+  .button-one {
+    @include button-standard(grid-one);
+  }
+  .button-two {
+    @include button-standard(grid-two);
+  }
+  .button-three {
+    @include button-standard(grid-three);
+  }
+  .button-four {
+    @include button-standard(grid-four);
+  }
+  .button-five {
+    @include button-standard(grid-five);
+  }
+  .button-six {
+    @include button-standard(grid-six);
+  }
+  .button-seven {
+    @include button-standard(grid-seven);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "grid-one grid-two"
+      "grid-three grid-four"
+      "grid-five grid-six"
+      "grid-seven empty";
+    @include grid-units();
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "grid-one grid-two grid-three"
+      "grid-four grid-five grid-six"
+      "grid-seven empty empty";
+    @include grid-units();
+  }
+}
